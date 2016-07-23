@@ -18,7 +18,9 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns('',
     url(r'^admin/', include(admin.site.urls)),  # NOQA
-    url(r'^', include('cms.urls')),
+    url(r'^polls/', include('polls.urls', namespace='polls')), # must BEFORE cms.urls
+    url(r'^', include('cms.urls')), # need to be last, 
+    # it swallows up anything that hasn't already been matched by a previous pattern
 )
 
 # This is only needed when using runserver.
