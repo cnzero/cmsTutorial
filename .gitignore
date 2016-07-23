@@ -1,0 +1,5 @@
+# python ignore files
+*.pyc
+*.pyc~
+*.un~
+*.txt~
