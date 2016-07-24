@@ -152,6 +152,7 @@ INSTALLED_APPS = [
     'reversion',
     'mysite',
     'polls', # a third-party application. 
+    'polls_cms_integration',
 ]
 
 LANGUAGES = (
